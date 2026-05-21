@@ -1,764 +1,562 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>แผ่นพับดิจิทัล ศูนย์การเรียนรู้เกษตรทฤษฎีใหม่ครบวงจร มทบ.๔๓</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Google Fonts (Sarabun & Prompt) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Sarabun', sans-serif;
-        }
-        h1, h2, h3, h4, .font-prompt {
-            font-family: 'Prompt', sans-serif;
-        }
-        .backdrop-blur-md {
-            backdrop-filter: blur(12px);
-        }
-        .fade-in {
-            animation: fadeIn 0.4s ease-out forwards;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ศูนย์การเรียนรู้เกษตรทฤษฎีใหม่ครบวงจร มทบ.๔๓</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+    font-family:'Sarabun',sans-serif;
+}
+h1,h2,h3,h4,.font-prompt{
+    font-family:'Prompt',sans-serif;
+}
+.fade-in{
+    animation:fadeIn .4s ease-out forwards;
+}
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
 </head>
-<body class="bg-stone-50 text-stone-800 min-h-screen flex flex-col">
 
-    <!-- Top Navigation / Banner -->
-    <header class="bg-emerald-800 text-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="bg-amber-500 p-2 rounded-full text-emerald-950">
-                    <i data-lucide="sprout" class="w-6 h-6"></i>
-                </div>
-                <div>
-                    <h1 class="font-bold text-base md:text-lg leading-tight">มทบ.๔๓</h1>
-                    <p class="text-xs text-emerald-100">ศูนย์การเรียนรู้เกษตรทฤษฎีใหม่ครบวงจร</p>
-                </div>
-            </div>
-            <div class="bg-emerald-700 hover:bg-emerald-600 transition-colors px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center space-x-1 cursor-pointer" onclick="toggleAudioGuideIntro()">
-                <i data-lucide="headphones" class="w-4 h-4 text-amber-400"></i>
-                <span>แนะนำบริการเสียง</span>
-            </div>
-        </div>
-    </header>
+<body class="bg-stone-100 text-stone-800 min-h-screen flex flex-col">
 
-    <!-- Main Content Cover / Intro -->
-    <main class="flex-grow max-w-4xl w-full mx-auto px-4 py-6">
-        
-        <!-- Hero Section -->
-        <div class="bg-gradient-to-r from-emerald-800 to-teal-700 text-white rounded-2xl p-6 md:p-8 shadow-xl mb-8 relative overflow-hidden">
-            <div class="absolute -right-10 -bottom-10 opacity-10 text-white">
-                <i data-lucide="leaf" class="w-64 h-64"></i>
-            </div>
-            <div class="relative z-10">
-                <span class="bg-amber-400 text-emerald-950 font-bold px-3 py-1 rounded-full text-xs font-prompt tracking-wider uppercase">แผ่นพับนำชมดิจิทัล (Digital Guide)</span>
-                <h2 class="text-2xl md:text-3xl font-bold mt-3 mb-2 font-prompt">ศูนย์การเรียนรู้เกษตรทฤษฎีใหม่ครบวงจร</h2>
-                <p class="text-sm md:text-base text-emerald-50 mb-4 font-light">
-                    น้อมนำหลักปรัชญาเศรษฐกิจพอเพียง และแนวทาง "เกษตรทฤษฎีใหม่" 
-                    ขับเคลื่อนและพัฒนาคุณภาพชีวิตกำลังพล ครอบครัว และชุมชนรอบค่ายเทพสตรีศรีสุนทร อย่างยั่งยืน
-                </p>
-                <div class="flex flex-wrap gap-2 text-xs text-amber-200">
-                    <span class="bg-emerald-900/50 px-3 py-1 rounded-full border border-emerald-600/30">📍 ร้อย.มทบ.๔๓</span>
-                    <span class="bg-emerald-900/50 px-3 py-1 rounded-full border border-emerald-600/30">👥 รองรับ ๖๐๐+ นาย</span>
-                    <span class="bg-emerald-900/50 px-3 py-1 rounded-full border border-emerald-600/30">🏫 ๕ โรงเรียนเครือข่าย</span>
-                    <span class="bg-emerald-900/50 px-3 py-1 rounded-full border border-emerald-600/30">🏠 ๒ ครอบครัวบ้านพักกำลังพล</span>
-                </div>
-            </div>
-        </div>
+<!-- HEADER -->
+<header class="bg-emerald-800 text-white shadow sticky top-0 z-50">
+<div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
 
-        <!-- Audio Intro Overlay -->
-        <div id="audioIntro" class="hidden bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-xl mb-6 shadow-sm transition-all">
-            <div class="flex justify-between items-start">
-                <div class="flex space-x-3">
-                    <i data-lucide="info" class="w-5 h-5 text-amber-600 mt-0.5"></i>
-                    <div>
-                        <h4 class="font-bold text-amber-900 text-sm font-prompt">นวัตกรรมบริการด้วยเสียง AI Audio Guide</h4>
-                        <p class="text-xs text-amber-800 mt-1">
-                            ท่านสามารถคลิกปุ่ม <strong class="text-emerald-700"><i data-lucide="volume-2" class="w-3.5 h-3.5 inline"></i> ฟังเสียงบรรยาย</strong> ในแต่ละฐาน เพื่อฟังรายละเอียดข้อมูลฐานการเรียนรู้ผ่านเทคโนโลยีการสังเคราะห์เสียงแบบเรียลไทม์ (AI Text-To-Speech) ช่วยอำนวยความสะดวกแก่ผู้พิการทางสายตา ผู้สูงอายุ หรือผู้เข้าชมที่ชื่นชอบการฟังบรรยายขณะเดินชมพื้นที่จริง
-                        </p>
-                    </div>
-                </div>
-                <button onclick="toggleAudioGuideIntro()" class="text-amber-500 hover:text-amber-700">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
-            </div>
-        </div>
+<div class="flex items-center gap-3">
+<div class="bg-amber-400 text-emerald-950 p-2 rounded-full">
+<i data-lucide="sprout" class="w-6 h-6"></i>
+</div>
 
-        <!-- Map & Base Stations Overview -->
-        <div class="mb-8">
-            <div class="flex items-center space-x-2 mb-4">
-                <i data-lucide="map" class="text-emerald-700 w-5 h-5"></i>
-                <h3 class="text-lg font-bold font-prompt text-emerald-900">แผนผังสถานีการเรียนรู้ ศาสตร์พระราชา</h3>
-            </div>
-            
-            <!-- Interactive Map Grid -->
-            <div class="bg-white p-4 rounded-xl shadow-md border border-stone-200">
-                <p class="text-xs text-stone-500 mb-3 text-center">💡 คลิกเลือกสถานีบนแผนผังจำลองเพื่อดูรายละเอียดข้อมูลการเรียนรู้แบบเจาะลึก</p>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-                    <button onclick="switchStation(0)" id="btn-map-0" class="map-btn p-3 bg-emerald-50 border-2 border-emerald-600 rounded-lg text-left transition-all hover:bg-emerald-100">
-                        <div class="text-xs font-bold text-emerald-800 font-prompt">ปฐมบท</div>
-                        <div class="text-sm font-semibold text-stone-800">๑. ศาสตร์พระราชา</div>
-                    </button>
-                    <button onclick="switchStation(1)" id="btn-map-1" class="map-btn p-3 bg-stone-50 border border-stone-200 rounded-lg text-left transition-all hover:bg-stone-100">
-                        <div class="text-xs font-bold text-stone-500 font-prompt">สถานีที่ ๑</div>
-                        <div class="text-sm font-semibold text-stone-800">ฐานคนรักษ์สมุนไพร</div>
-                    </button>
-                    <button onclick="switchStation(2)" id="btn-map-2" class="map-btn p-3 bg-stone-50 border border-stone-200 rounded-lg text-left transition-all hover:bg-stone-100">
-                        <div class="text-xs font-bold text-stone-500 font-prompt">สถานีที่ ๒</div>
-                        <div class="text-sm font-semibold text-stone-800">ฐานคนรักษ์แม่โพสพ</div>
-                    </button>
-                    <button onclick="switchStation(3)" id="btn-map-3" class="map-btn p-3 bg-stone-50 border border-stone-200 rounded-lg text-left transition-all hover:bg-stone-100">
-                        <div class="text-xs font-bold text-stone-500 font-prompt">สถานีที่ ๓</div>
-                        <div class="text-sm font-semibold text-stone-800">ฐานคนรักษ์น้ำ</div>
-                    </button>
-                    <button onclick="switchStation(4)" id="btn-map-4" class="map-btn p-3 bg-stone-50 border border-stone-200 rounded-lg text-left transition-all hover:bg-stone-100">
-                        <div class="text-xs font-bold text-stone-500 font-prompt">สถานีที่ ๔</div>
-                        <div class="text-sm font-semibold text-stone-800">ฐานคนรักษ์ดิน</div>
-                    </button>
-                    <button onclick="switchStation(5)" id="btn-map-5" class="map-btn p-3 bg-stone-50 border border-stone-200 rounded-lg text-left transition-all hover:bg-stone-100">
-                        <div class="text-xs font-bold text-stone-500 font-prompt">สถานีที่ ๕</div>
-                        <div class="text-sm font-semibold text-stone-800">ฐานคนรักษ์ป่า</div>
-                    </button>
-                    <button onclick="switchStation(6)" id="btn-map-6" class="map-btn p-3 bg-stone-50 border border-stone-200 rounded-lg text-left transition-all hover:bg-stone-100">
-                        <div class="text-xs font-bold text-stone-500 font-prompt">สถานีที่ ๖</div>
-                        <div class="text-sm font-semibold text-stone-800">ฐานคนรักษ์สัตว์</div>
-                    </button>
-                    <button onclick="switchStation(7)" id="btn-map-7" class="map-btn p-3 bg-stone-50 border border-stone-200 rounded-lg text-left transition-all hover:bg-stone-100">
-                        <div class="text-xs font-bold text-stone-500 font-prompt">สถานีที่ ๗</div>
-                        <div class="text-sm font-semibold text-stone-800">ฐานพลังงานทดแทน</div>
-                    </button>
-                </div>
-            </div>
-        </div>
+<div>
+<h1 class="font-bold text-lg">มทบ.๔๓</h1>
+<p class="text-xs text-emerald-100">
+ศูนย์การเรียนรู้เกษตรทฤษฎีใหม่ครบวงจร
+</p>
+</div>
+</div>
 
-        <!-- Station Details Content -->
-        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-stone-200 transition-all duration-300" id="station-card">
-            <div class="h-3 bg-emerald-600" id="station-accent"></div>
-            <div class="p-6 md:p-8">
-                
-                <!-- Station Meta -->
-                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-                    <div>
-                        <span class="text-emerald-700 font-bold text-xs tracking-wider uppercase font-prompt" id="station-tag">กองทัพบกเพื่อประชาชน</span>
-                        <h3 class="text-2xl font-bold font-prompt text-stone-900 mt-1" id="station-title">ศาสตร์พระราชา</h3>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <button onclick="toggleAudioPlay()" class="flex items-center space-x-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-prompt px-4 py-2 rounded-xl text-sm font-semibold shadow-md transition-all">
-                            <i id="audio-icon" data-lucide="volume-2" class="w-4 h-4"></i>
-                            <span id="audio-btn-text">ฟังเสียงบรรยาย</span>
-                        </button>
-                    </div>
-                </div>
+<button onclick="toggleAudioGuideIntro()"
+class="bg-emerald-700 hover:bg-emerald-600 px-3 py-2 rounded-lg text-sm flex items-center gap-2">
+<i data-lucide="headphones" class="w-4 h-4"></i>
+<span>แนะนำระบบเสียง</span>
+</button>
 
-                <!-- Highlight Text -->
-                <div class="bg-stone-50 p-4 rounded-xl border-l-4 border-emerald-600 mb-6 italic text-stone-700 text-sm leading-relaxed" id="station-quote">
-                    "หลักคิดเพื่อความมั่นคงและยั่งยืน ด้วยทฤษฎีการบริหารจัดการดิน น้ำ ป่า คน และความร่วมมือร่วมใจ"
-                </div>
+</div>
+</header>
 
-                <!-- Main Content Info -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
-                    <div>
-                        <h4 class="font-bold text-emerald-800 font-prompt mb-3 flex items-center space-x-2">
-                            <i data-lucide="book-open" class="w-4 h-4"></i>
-                            <span>วัตถุประสงค์และสาระสำคัญ</span>
-                        </h4>
-                        <p class="text-sm text-stone-600 leading-relaxed" id="station-desc">
-                            ศูนย์การเรียนรู้ มทบ.๔๓ มุ่งหวังให้กำลังพลนายทหาร นายสิบ ทหารกองประจำการ และครอบครัว มีองค์ความรู้ความเข้าใจอย่างลึกซึ้ง ตระหนักในความสำคัญของการสร้างความมั่นคงทางอาหารและการพึ่งพาตนเองในยามเผชิญวิกฤตธรรมชาติและภัยสงคราม
-                        </p>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-emerald-800 font-prompt mb-3 flex items-center space-x-2">
-                            <i data-lucide="activity" class="w-4 h-4"></i>
-                            <span>กิจกรรมที่ให้ผู้เยี่ยมชมร่วมปฏิบัติ</span>
-                        </h4>
-                        <ul class="text-sm text-stone-600 space-y-2 list-disc list-inside" id="station-activities">
-                            <li>เรียนรู้แนวพระราชดำริและกระบวนการทำงานแบบครบวงจร</li>
-                            <li>ศึกษากระบวนการจัดการพื้นที่ ร้อย.มทบ.๔๓ เพื่อทำโครงการโคกหนองนา</li>
-                            <li>แลกเปลี่ยนแนวคิดเพื่อนำไปปรับใช้ในแปลงเกษตรของตนเอง</li>
-                        </ul>
-                    </div>
-                </div>
+<!-- MAIN -->
+<main class="flex-grow max-w-6xl mx-auto px-4 py-6 w-full">
 
-                <!-- Modern Features: AI Farm Generator & QR -->
-                <div class="border-t border-stone-100 pt-6 mt-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        
-                        <!-- AI Image Simulation -->
-                        <div class="bg-gradient-to-br from-stone-900 to-stone-800 text-stone-100 rounded-xl p-5 relative overflow-hidden flex flex-col justify-between">
-                            <div>
-                                <h4 class="font-bold text-amber-400 font-prompt text-sm mb-2 flex items-center space-x-2">
-                                    <i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i>
-                                    <span>สร้างสรรค์ภาพแปลงสาธิตด้วย AI</span>
-                                </h4>
-                                <p class="text-xs text-stone-300 mb-4 font-light">
-                                    เชื่อมต่อระบบจำลองภาพอัจฉริยะ Imagen เพื่อสร้างรูปถ่ายเสมือนจริงของแนวคิดการจัดสวน/แปลงเกษตรประจำฐานนี้ตามแบบแผนโครงการ มทบ.๔๓
-                                </p>
-                            </div>
-                            
-                            <!-- Simulator Window -->
-                            <div class="relative bg-stone-950 aspect-[4/3] rounded-lg overflow-hidden flex items-center justify-center border border-stone-700">
-                                <div id="ai-loading" class="hidden absolute inset-0 bg-stone-950/95 z-20 flex flex-col items-center justify-center p-4 text-center">
-                                    <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-400 mb-2"></div>
-                                    <span class="text-xs text-amber-200 font-prompt">AI กำลังประมวลผลความรู้ และวาดภาพถ่ายจำลองความละเอียดสูง...</span>
-                                </div>
-                                <img id="ai-image-preview" src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=600" alt="แนวคิดโคกหนองนา" class="w-full h-full object-cover">
-                            </div>
-                            
-                            <button onclick="generateRealAIImage()" class="mt-3 w-full bg-amber-400 hover:bg-amber-500 text-stone-950 font-bold font-prompt py-2.5 rounded-lg text-xs transition-all flex items-center justify-center space-x-1.5 shadow-md">
-                                <i data-lucide="wand-2" class="w-3.5 h-3.5"></i>
-                                <span>✨ วาดภาพจำลองด้วย AI (Imagen)</span>
-                            </button>
-                        </div>
+<!-- HERO -->
+<section class="bg-gradient-to-r from-emerald-800 to-teal-700 text-white rounded-3xl p-8 shadow-xl relative overflow-hidden mb-8">
 
-                        <!-- Eco Tips & Smart QR Guide -->
-                        <div class="flex flex-col justify-between bg-emerald-50/50 rounded-xl p-5 border border-emerald-100">
-                            <div>
-                                <h4 class="font-bold text-emerald-900 font-prompt text-sm mb-1">💡 เกร็ดความรู้สถานีปราชญ์</h4>
-                                <p class="text-xs text-stone-600 leading-relaxed" id="station-tips">
-                                    หลักการจัดสรรพื้นที่ทฤษฎีใหม่ตามสูตรดั้งเดิมคือ 30:30:30:10 (แหล่งน้ำ : นาข้าว : พืชพันธุ์ไม้ : ที่อยู่อาศัยและทางสัญจร) ช่วยสร้างระบบนิเวศน์หมุนเวียนสมบูรณ์แบบ
-                                </p>
-                            </div>
-                            <div class="pt-4 border-t border-emerald-100/60 mt-4 flex items-center justify-between">
-                                <div class="flex items-center space-x-2">
-                                    <div class="bg-white p-1 rounded-lg border border-stone-200">
-                                        <svg class="w-12 h-12 text-stone-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <rect x="2" y="2" width="6" height="6" />
-                                            <rect x="16" y="2" width="6" height="6" />
-                                            <rect x="2" y="16" width="6" height="6" />
-                                            <rect x="14" y="14" width="2" height="2" />
-                                            <rect x="18" y="18" width="4" height="4" />
-                                            <path d="M10 2h2v4h-2V2zM2 10h4v2H2v-2zM16 10h4v2h-4v-2zM10 16h2v4h-2v-4z" />
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <div class="text-xs font-bold text-emerald-900 font-prompt">คลังความรู้ดิจิทัล</div>
-                                        <p class="text-[10px] text-stone-500">สแกนศึกษาคู่มือประจำฐาน</p>
-                                    </div>
-                                </div>
-                                <button onclick="shareStation()" class="bg-white hover:bg-stone-100 text-stone-700 px-3 py-1.5 rounded-lg text-xs font-semibold border border-stone-300 flex items-center space-x-1">
-                                    <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
-                                    <span>แชร์หน้าสถานี</span>
-                                </button>
-                            </div>
-                        </div>
+<div class="absolute right-0 bottom-0 opacity-10">
+<i data-lucide="leaf" class="w-72 h-72"></i>
+</div>
 
-                    </div>
-                </div>
+<div class="relative z-10">
 
-                <!-- AI Expert Chat Console -->
-                <div class="mt-8 border-t border-stone-150 pt-6">
-                    <div class="bg-gradient-to-r from-emerald-900 to-teal-800 rounded-xl p-5 text-white shadow-inner relative overflow-hidden">
-                        <div class="absolute right-0 top-0 translate-x-1/4 -translate-y-1/4 opacity-10">
-                            <i data-lucide="message-square" class="w-32 h-32"></i>
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center space-x-2 mb-2">
-                                <span class="bg-amber-400 text-stone-900 text-[10px] font-bold px-2 py-0.5 rounded-full font-prompt">AI CONSULTANT</span>
-                                <h4 class="font-bold text-base font-prompt text-amber-300 flex items-center space-x-1.5">
-                                    <i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i>
-                                    <span>ปรึกษาปราชญ์เกษตร AI ประจำสถานีนี้</span>
-                                </h4>
-                            </div>
-                            <p class="text-xs text-emerald-100 font-light mb-4">
-                                สอบถามข้อมูลเชิงลึก วิธีการประยุกต์ทำเองที่บ้าน สูตรการบำรุง หรือข้อสงสัยเกี่ยวกับองค์ความรู้ประจำฐานนี้ได้ทันที
-                            </p>
+<div class="inline-block bg-amber-400 text-emerald-950 font-bold px-4 py-1 rounded-full text-xs mb-4">
+DIGITAL AGRICULTURE GUIDE
+</div>
 
-                            <!-- AI Output Container -->
-                            <div id="ai-chat-output-box" class="hidden mb-4 p-4 bg-emerald-950/80 rounded-lg border border-emerald-700/50 max-h-60 overflow-y-auto">
-                                <div class="flex items-start space-x-3 text-xs leading-relaxed">
-                                    <div class="bg-amber-400 text-emerald-950 p-1.5 rounded-full shrink-0">
-                                        <i data-lucide="bot" class="w-4 h-4"></i>
-                                    </div>
-                                    <div>
-                                        <p class="font-bold text-amber-300 font-prompt mb-1">ปราชญ์เกษตร AI ประจำฐาน</p>
-                                        <div id="ai-chat-text" class="text-stone-100 whitespace-pre-wrap"></div>
-                                    </div>
-                                </div>
-                            </div>
+<h2 class="text-3xl font-bold mb-3">
+ศูนย์การเรียนรู้เกษตรทฤษฎีใหม่ครบวงจร
+</h2>
 
-                            <!-- Fast Query Buttons -->
-                            <div class="flex flex-wrap gap-2 mb-3">
-                                <button onclick="askAIExpert('ขอสูตรและวิธีการบำรุงรักษาเพื่อสร้างผลผลิตที่มีประสิทธิภาพสูงสุดประจำฐานนี้')" class="bg-emerald-800/80 hover:bg-emerald-700/90 text-[11px] px-3 py-1.5 rounded-full border border-emerald-600/50 transition-colors text-left">
-                                    👉 ขอสูตรบำรุงประจำฐาน
-                                </button>
-                                <button onclick="askAIExpert('หากต้องการประยุกต์ใช้องค์ความรู้จากฐานนี้ในพื้นที่จำกัดหลังบ้านทาวน์โฮม ต้องทำอย่างไร')" class="bg-emerald-800/80 hover:bg-emerald-700/90 text-[11px] px-3 py-1.5 rounded-full border border-emerald-600/50 transition-colors text-left">
-                                    👉 ประยุกต์ใช้กับบ้านพื้นที่น้อย
-                                </button>
-                                <button onclick="askAIExpert('ปัญหาหรืออุปสรรคสำคัญที่พบบ่อยในฐานการเรียนรู้นี้คืออะไร และมีวิธีแก้ไขตามธรรมชาติอย่างไร')" class="bg-emerald-800/80 hover:bg-emerald-700/90 text-[11px] px-3 py-1.5 rounded-full border border-emerald-600/50 transition-colors text-left">
-                                    👉 ปัญหาที่พบบ่อย & วิธีการรับมือ
-                                </button>
-                            </div>
+<p class="text-emerald-50 leading-relaxed max-w-3xl">
+น้อมนำหลักปรัชญาเศรษฐกิจพอเพียงและศาสตร์พระราชา
+สู่การพัฒนาคุณภาพชีวิตกำลังพล ครอบครัว และชุมชน
+เพื่อสร้างความมั่นคงทางอาหารและความยั่งยืน
+</p>
 
-                            <!-- Custom Input Form -->
-                            <div class="flex space-x-2">
-                                <input type="text" id="ai-custom-prompt" placeholder="พิมพ์ข้อสงสัยเพื่อปรึกษาปราชญ์ AI เพิ่มเติมที่นี่..." class="flex-grow bg-emerald-950/60 border border-emerald-700/50 rounded-lg px-3 py-2 text-xs text-white placeholder-emerald-300/60 focus:outline-none focus:ring-1 focus:ring-amber-400">
-                                <button onclick="askAICustom()" class="bg-amber-400 hover:bg-amber-500 text-stone-900 font-bold px-4 py-2 rounded-lg text-xs transition-colors flex items-center space-x-1 font-prompt shrink-0">
-                                    <i data-lucide="send" class="w-3.5 h-3.5"></i>
-                                    <span>ถามปราชญ์ AI</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<div class="flex flex-wrap gap-2 mt-5 text-sm">
+<div class="bg-emerald-900/40 px-3 py-1 rounded-full">
+📍 ค่ายเทพสตรีศรีสุนทร
+</div>
 
-                <!-- AI Custom Land Planner & Allocator -->
-                <div class="mt-8 border-t border-stone-200 pt-6">
-                    <div class="bg-stone-900 rounded-xl p-5 text-white shadow-lg relative overflow-hidden border border-stone-800">
-                        <div class="absolute right-0 top-0 translate-x-1/4 -translate-y-1/4 opacity-5">
-                            <i data-lucide="layout" class="w-48 h-48"></i>
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center space-x-2 mb-2">
-                                <span class="bg-emerald-500 text-stone-950 text-[10px] font-bold px-2 py-0.5 rounded-full font-prompt">AI PLANNER</span>
-                                <h4 class="font-bold text-base font-prompt text-emerald-400 flex items-center space-x-1.5">
-                                    <i data-lucide="sparkles" class="w-4 h-4 text-emerald-400"></i>
-                                    <span>ระบบวางผังโคกหนองนาส่วนบุคคลด้วย AI</span>
-                                </h4>
-                            </div>
-                            <p class="text-xs text-stone-300 font-light mb-4">
-                                นำแนวคิดเกษตรทฤษฎีใหม่ มทบ.๔๓ ไปปรับใช้จริง! ป้อนขนาดที่ดินรวมของคุณเพื่อคำนวณอัตราส่วนการจัดสรรพื้นที่ 30:30:30:10 ตามหลักการคำนวณที่แม่นยำ
-                            </p>
+<div class="bg-emerald-900/40 px-3 py-1 rounded-full">
+👥 รองรับ 600+ นาย
+</div>
 
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                                <div>
-                                    <label class="block text-[11px] text-stone-400 font-prompt mb-1">ขนาดพื้นที่ทั้งหมด (ตารางวา)</label>
-                                    <input type="number" id="planner-size" value="400" placeholder="ตัวอย่าง 400 ตร.ว. (= 1 ไร่)" class="w-full bg-stone-950 border border-stone-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:ring-1 focus:ring-emerald-400">
-                                </div>
-                                <div>
-                                    <label class="block text-[11px] text-stone-400 font-prompt mb-1">เป้าหมายหลักของการทำเกษตร</label>
-                                    <select id="planner-goal" class="w-full bg-stone-950 border border-stone-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:ring-1 focus:ring-emerald-400">
-                                        <option value="protein">เน้นปศุสัตว์และแหล่งโปรตีนสัตว์</option>
-                                        <option value="mixed" selected>เน้นทำนาและพืชสวนหมุนเวียนบริโภค</option>
-                                        <option value="forest">เน้นป่า 경제 (ไม้ป่า 3 อย่าง ประโยชน์ 4 อย่าง)</option>
-                                        <option value="herb">เน้นพืชสมุนไพรและแหล่งท่องเที่ยวพึ่งตนเอง</option>
-                                    </select>
-                                </div>
-                                <div class="flex items-end">
-                                    <button onclick="calculatePlan()" class="w-full bg-emerald-500 hover:bg-emerald-600 text-stone-950 font-bold font-prompt py-2 rounded-lg text-xs transition-colors flex items-center justify-center space-x-1">
-                                        <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
-                                        <span>คำนวณสัดส่วนพื้นที่</span>
-                                    </button>
-                                </div>
-                            </div>
+<div class="bg-emerald-900/40 px-3 py-1 rounded-full">
+🌱 โครงการโคกหนองนา
+</div>
+</div>
 
-                            <!-- Plan Result Display Inside Widget -->
-                            <div id="planner-result" class="hidden bg-stone-950 p-4 rounded-xl border border-stone-800 text-stone-200">
-                                <h5 class="text-xs font-bold text-emerald-400 font-prompt mb-3 flex items-center space-x-1.5">
-                                    <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>
-                                    <span>ผลการคำนวณผังพื้นที่โคกหนองนาโมเดล</span>
-                                </h5>
-                                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-center mb-3">
-                                    <div class="bg-stone-900 p-2 rounded border border-stone-800">
-                                        <div class="text-[10px] text-sky-400 font-semibold font-prompt">ขุดสระน้ำ (30%)</div>
-                                        <div id="res-water" class="text-sm font-bold text-white mt-0.5">-</div>
-                                        <div class="text-[9px] text-stone-500">ตารางวา</div>
-                                    </div>
-                                    <div class="bg-stone-900 p-2 rounded border border-stone-800">
-                                        <div class="text-[10px] text-amber-500 font-semibold font-prompt">ปลูกข้าวนาปี (30%)</div>
-                                        <div id="res-rice" class="text-sm font-bold text-white mt-0.5">-</div>
-                                        <div class="text-[9px] text-stone-500">ตารางวา</div>
-                                    </div>
-                                    <div class="bg-stone-900 p-2 rounded border border-stone-800">
-                                        <div class="text-[10px] text-emerald-400 font-semibold font-prompt">พืชสวน/ไม้ป่า (30%)</div>
-                                        <div id="res-garden" class="text-sm font-bold text-white mt-0.5">-</div>
-                                        <div class="text-[9px] text-stone-500">ตารางวา</div>
-                                    </div>
-                                    <div class="bg-stone-900 p-2 rounded border border-stone-800">
-                                        <div class="text-[10px] text-stone-400 font-semibold font-prompt">ที่อยู่/ทางเดิน (10%)</div>
-                                        <div id="res-home" class="text-sm font-bold text-white mt-0.5">-</div>
-                                        <div class="text-[9px] text-stone-500">ตารางวา</div>
-                                    </div>
-                                </div>
-                                <p id="planner-advice" class="text-[11px] text-stone-400 font-light border-t border-stone-900 pt-2 italic"></p>
-                            </div>
+</div>
+</section>
 
-                        </div>
-                    </div>
-                </div>
+<!-- AUDIO GUIDE -->
+<div id="audioIntro"
+class="hidden bg-amber-50 border-l-4 border-amber-500 rounded-r-xl p-4 mb-6">
 
-            </div>
-        </div>
-    </main>
+<div class="flex justify-between gap-4">
 
-    <!-- Footer Document Info -->
-    <footer class="bg-stone-900 text-stone-400 text-xs py-6 mt-12 border-t border-stone-800 text-center">
-        <div class="max-w-4xl mx-auto px-4 space-y-2">
-            <p class="font-prompt text-stone-300">© 2026 ศูนย์การเรียนรู้เกษตรทฤษฎีใหม่ครบวงจร มณฑลทหารบกที่ ๔๓</p>
-            <p class="font-light text-stone-500">ค่ายเทพสตรีศรีสุนทร ต.กะปาง อ.ทุ่งสง จ.นครศรีธรรมราช</p>
-        </div>
-    </footer>
+<div class="flex gap-3">
+<i data-lucide="info" class="w-5 h-5 text-amber-600 mt-1"></i>
 
-    <!-- Script Application Logic -->
-    <script>
-        // 1. Database for 8 learning stations
-        const stationsData = [
-            {
-                tag: "ปฐมบทศาสตร์พระราชา",
-                title: "๑. ศาสตร์พระราชาสู่การพัฒนาที่ยั่งยืน",
-                quote: `"หลักคิดเพื่อความมั่นคงและยั่งยืน ด้วยทฤษฎีการบริหารจัดการดิน น้ำ ป่า คน และความร่วมมือร่วมใจ"`,
-                desc: "ศูนย์การเรียนรู้ มทบ.๔๓ มุ่งหวังให้กำลังพลนายทหาร นายสิบ ทหารกองประจำการ และครอบครัว มีองค์ความรู้ความเข้าใจอย่างลึกซึ้ง ตระหนักในความสำคัญของการสร้างความมั่นคงทางอาหารและการพึ่งพาตนเองในยามเผชิญวิกฤตธรรมชาติและภัยสงคราม",
-                activities: [
-                    "เรียนรู้แนวพระราชดำริและกระบวนการทำงานแบบครบวงจร",
-                    "ศึกษากระบวนการจัดการพื้นที่ ร้อย.มทบ.๔๓ เพื่อทำโครงการโคกหนองนา",
-                    "แลกเปลี่ยนแนวคิดเพื่อนำไปปรับใช้ในแปลงเกษตรของตนเอง"
-                ],
-                tips: "หลักการจัดสรรพื้นที่ทฤษฎีใหม่ตามสูตรดั้งเดิมคือ 30:30:30:10 (แหล่งน้ำ : นาข้าว : พืชพันธุ์ไม้ : ที่อยู่อาศัยและทางสัญจร) ช่วยสร้างระบบนิเวศน์หมุนเวียนสมบูรณ์แบบ",
-                img: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=600",
-                accent: "bg-emerald-600",
-                ttsText: "ยินดีต้อนรับสู่ปฐมบทศาสตร์พระราชา ศูนย์การเรียนรู้เกษตรทฤษฎีใหม่ครบวงจร มณฑลทหารบกที่ 43 ฐานนี้คือจุดเริ่มต้นในการเรียนรู้หลักปรัชญาเศรษฐกิจพอเพียงและการบริหารจัดการพื้นที่ตามโมเดลโคกหนองนาเพื่อความมั่นคงยั่งยืน"
-            },
-            {
-                tag: "สถานีที่ ๑",
-                title: "ฐานคนรักษ์สมุนไพร",
-                quote: `"พืชสมุนไพรคือคลังยาสามัญประจำบ้านจากธรรมชาติ บรรเทาโรค ลดรายจ่าย เสริมภูมิคุ้มกัน"`,
-                desc: "รวบรวมและสาธิตการปลูกพืชสมุนไพรท้องถิ่น พืชสมุนไพรเศรษฐกิจ และการแปรรูปขั้นพื้นฐาน เพื่อลดการพึ่งพายาเคมีแผนปัจจุบัน และสร้างความมั่นคงทางเวชภัณฑ์ในครัวเรือน",
-                activities: [
-                    "จำแนกประเภทสมุนไพร (รสยา ๙ รส และสรรพคุณทางยา)",
-                    "สาธิตการขยายพันธุ์พืชสมุนไพรที่สำคัญ เช่น ฟ้าทะลายโจร ขมิ้นชัน กระชายขาว",
-                    "ทดลองปรุงชาสมุนไพรเพื่อสุขภาพตามธาตุเจ้าเรือน"
-                ],
-                tips: "การปลูกพืชสมุนไพรควรจัดกลุ่มตามปริมาณความต้องการน้ำและแสงแดด เช่น ฟ้าทะลายโจรชอบแดดจัดรำไร ส่วนกระชายจะเจริญเติบโตได้ดีในดินร่วนซุยที่มีการระบายน้ำดี",
-                img: "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&q=80&w=600",
-                accent: "bg-teal-600",
-                ttsText: "สถานีที่ 1 ฐานคนรักษ์สมุนไพร แหล่งรวบรวมภูมิปัญญาแพทย์แผนไทยและพืชสมุนไพรท้องถิ่น มุ่งเน้นการปลูกเพื่อพึ่งพาตนเองด้านสุขภาพและการลดรายจ่ายค่ารักษาพยาบาลในครัวเรือน"
-            },
-            {
-                tag: "สถานีที่ ๒",
-                title: "ฐานคนรักษ์แม่โพสพ",
-                quote: `"ข้าวกระสอบเดียวเลี้ยงกายได้ชั่วคราว ข้าวในนาเลี้ยงชีวิตได้ชั่วลูกชั่วหลาน"`,
-                desc: "จัดแสดงและสาธิตการทำนาข้าวอินทรีย์ การลดต้นทุนการผลิตข้าว และการอนุรักษ์พันธุ์ข้าวพื้นเมือง เพื่อให้กำลังพลเข้าใจสัจธรรมของอู่ข้าวอู่น้ำและการผลิตอาหารหลักอย่างปลอดภัย",
-                activities: [
-                    "ศึกษาการทำนาโยนและนาปาเป้า วิธีประหยัดแรงงานและต้นทุนพันธุ์ข้าว",
-                    "เรียนรู้การใช้ปุ๋ยหมักชีวภาพแทนสารเคมีในการบำรุงต้นข้าว",
-                    "ทดลองตำข้าวแบบโบราณและการคัดแยกแกลบ รำ ข้าวสาร"
-                ],
-                tips: "การแหนแดงในนาข้าวช่วยตรึงไนโตรเจนจากอากาศ ทำให้ต้นข้าวได้รับปุ๋ยธรรมชาติอย่างต่อเนื่อง และช่วยควบคุมวัชพืชในนาข้าวไปในตัวโดยไม่ต้องใช้ยาฆ่าหญ้า",
-                img: "https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&q=80&w=600",
-                accent: "bg-amber-500",
-                ttsText: "สถานีที่ 2 ฐานคนรักษ์แม่โพสพ เรียนรู้วิถีชาวนาและการปลูกข้าวอินทรีย์พึ่งตนเองอย่างลดต้นทุน มุ่งสร้างความมั่นคงทางอาหารหลักของชาติและครอบครัว"
-            },
-            {
-                tag: "สถานีที่ ๓",
-                title: "ฐานคนรักษ์น้ำ",
-                quote: `"น้ำคือชีวิต จากอัมพฤกษ์สู่ความอุดมสมบูรณ์ ด้วยการกักเก็บและจัดการอย่างถูกวิธี"`,
-                desc: "สาธิตระบบการจัดการน้ำในหลากรูปแบบเพื่อการเกษตรกรรม การบำบัดน้ำเสียด้วยวิธีธรรมชาติ และการกักเก็บน้ำตามแนวทางโคกหนองนาโมเดล เพื่อให้มีน้ำใช้ตลอดทั้งปี",
-                activities: [
-                    "ศึกษาขุดคลองไส้ไก่และการทำฝายชะลอน้ำเพื่อเพิ่มความชุ่มชื้นในดิน",
-                    "เรียนรู้การทำงานของระบบบำบัดน้ำเสียด้วยผักตบชวาและพืชน้ำ",
-                    "ทดลองใช้ปั๊มน้ำพลังงานแสงอาทิตย์ในการกระจายน้ำเข้าแปลงเกษตร"
-                ],
-                tips: "การทำคลองไส้ไก่รอบพื้นที่ช่วยเปลี่ยนน้ำไหลบ่าให้กลายเป็นน้ำซึมซับลงใต้ดิน ช่วยรักษาความชุ่มชื้นให้รากพืชโดยไม่จำเป็นต้องรดน้ำบ่อยครั้ง",
-                img: "https://images.unsplash.com/photo-1508873696983-2df519f0397e?auto=format&fit=crop&q=80&w=600",
-                accent: "bg-sky-600",
-                ttsText: "สถานีที่ 3 ฐานคนรักษ์น้ำ หัวใจของการเกษตรคือการจัดการน้ำ ฐานนี้สาธิตการกักเก็บน้ำในพื้นที่ผ่านระบบคลองไส้ไก่ หลุมขนมครก และการกระจายน้ำอย่างรู้คุณค่า"
-            },
-            {
-                tag: "สถานีที่ ๔",
-                title: "ฐานคนรักษ์ดิน",
-                quote: `"เลี้ยงดิน ให้ดินเลี้ยงพืช คืนชีวิตให้ผืนดินด้วยอินทรียวัตถุและการห่มดิน"`,
-                desc: "เจาะลึกวิธีการปรับปรุงโครงสร้างดินที่เสื่อมสภาพ การทำปุ๋ยหมักอินทรีย์ ปุ๋ยหมักสูตรพระราชทาน และการเพาะเลี้ยงจุลินทรีย์ท้องถิ่นเพื่อคืนความสมบูรณ์ให้แก่ชั้นดิน",
-                activities: [
-                    "เรียนรู้เทคนิคการ 'ห่มดิน' ด้วยฟางข้าว ใบไม้ และการแห้งชามน้ำชาม",
-                    "สาธิตการทำน้ำหมักชีวภาพ (รสจืด, รสขม, รสเปรี้ยว) เพื่อไล่แมลงและบำรุงพืช",
-                    "ลงมือผสมดินปลูกสูตรจักรพรรดิสำหรับเพาะกล้าไม้"
-                ],
-                tips: "ดินที่ดีต้องมีชีวิต หลีกเลี่ยงการใช้ปุ๋ยเคมีซึ่งจะทำลายจุลินทรีย์และไส้เดือนในดิน ให้เน้นการใส่ปุ๋ยคอกร่วมกับการห่มดินเพื่อรักษาความชื้นและสร้างฮิวมัส",
-                img: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&q=80&w=600",
-                accent: "bg-amber-800",
-                ttsText: "สถานีที่ 4 ฐานคนรักษ์ดิน เรียนรู้ศาสตร์แห่งการปรุงดิน เลี้ยงดินให้ดินเลี้ยงพืช ผ่านกระบวนการห่มดินและการผลิตปุ๋ยหมักอินทรีย์ชีวภาพทดแทนเคมี"
-            },
-            {
-                tag: "สถานีที่ ๕",
-                title: "ฐานคนรักษ์ป่า",
-                quote: `"ปลูกป่า ๓ อย่าง ประโยชน์ ๔ อย่าง สร้างความร่มเย็น ไม้ใช้สอย ไม้กิน และความพอเพียง"`,
-                desc: "สร้างแนวคิดการปลูกป่าเลียนแบบระบบนิเวศธรรมชาติ เพื่อประโยชน์ในด้านอาหาร ไม้ใช้สอย ไม้เศรษฐกิจ และการอนุรักษ์สิ่งแวดล้อมตามแนวพระราชดำริ",
-                activities: [
-                    "ศึกษาการปลูกพืช ๕ ระดับ (สูง กลาง เตี้ย เรี่ยดิน กินหัว)",
-                    "เรียนรู้การปลูกไม้เศรษฐกิจระยะยาว เช่น พะยูง ยางนา ตะเคียน",
-                    "เพาะชำกล้าไม้ป่าและศึกษาประโยชน์ของพืชแต่ละชนิด"
-                ],
-                tips: "พืช ๕ ระดับช่วยให้เราใช้ประโยชน์จากแสงแดดและพื้นที่ได้อย่างสูงสุด โดยพืชชั้นบนจะช่วยบังแสงให้พืชชั้นล่างที่ชอบร่มรำไร ทำให้ได้ผลผลิตหลากหลายในพื้นที่เดียว",
-                img: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=600",
-                accent: "bg-lime-700",
-                ttsText: "สถานีที่ 5 ฐานคนรักษ์ป่า น้อมนำแนวพระราชดำริ ปลูกป่า 3 อย่าง ประโยชน์ 4 อย่าง และการจัดสรรพืช 5 ระดับ เพื่อสร้างระบบนิเวศที่เกื้อกูลกันและสร้างรายได้ระยะยาว"
-            },
-            {
-                tag: "สถานีที่ ๖",
-                title: "ฐานคนรักษ์สัตว์",
-                quote: `"การปศุสัตว์พึ่งตนเอง เกื้อกูลพืชสวน มูลสัตว์เป็นปุ๋ย เศษพืชเป็นอาหารสัตว์"`,
-                desc: "การเลี้ยงสัตว์จำกัดพื้นที่เพื่อการบริโภคในครัวเรือนและการค้าชุมชน เช่น การเลี้ยงไก่ไข่อารมณ์ดี การเลี้ยงสุกรหลุม และการเพาะเลี้ยงปลาเบื้องต้นเพื่อสร้างแหล่งโปรตีนประจำบ้าน",
-                activities: [
-                    "ศึกษาการสร้างโรงเรือนไก่ไข่แบบลดกลิ่นและประหยัดพลังงาน",
-                    "เรียนรู้วิธีการทำอาหารสัตว์ลดต้นทุนจากหยวกกล้วยและรำข้าว",
-                    "สาธิตการเลี้ยงหมูหลุมเพื่อลดปัญหากลิ่นรบกวนและได้ปุ๋ยคอกคุณภาพเยี่ยม"
-                ],
-                tips: "การเลี้ยงหมูหลุมโดยใช้แกลบและถ่านรองพื้นช่วยดูดซับกลิ่นและของเสียจากหมู เมื่อครบกำหนดแกลบรองพื้นจะกลายเป็นปุ๋ยอินทรีย์ชั้นยอดสำหรับนำไปใส่แปลงผัก",
-                img: "https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&q=80&w=600",
-                accent: "bg-orange-600",
-                ttsText: "สถานีที่ 6 ฐานคนรักษ์สัตว์ แหล่งเรียนรู้ปศุสัตว์และประมงขนาดเล็กเพื่อความมั่นคงทางโปรตีน เช่น หมูหลุม ไก่ไข่ และการทำอาหารสัตว์ลดต้นทุน"
-            },
-            {
-                tag: "สถานีที่ ๗",
-                title: "ฐานพลังงานทดแทน",
-                quote: `"พึ่งพาตนเองด้านพลังงาน ลดรายจ่ายรักษ์โลก ด้วยพลังงานแสงอาทิตย์และชีวมวล"`,
-                desc: "นวัตกรรมพลังงานสะอาดที่จับต้องได้และประยุกต์ใช้ได้จริงในภาคเกษตรกรรม เช่น เตาเผาถ่านไร้ควัน ระบบสูบน้ำโซลาร์เซลล์ และการผลิตแก๊สชีวภาพจากมูลสัตว์",
-                activities: [
-                    "ศึกษาการทำงานของถังหมักแก๊สชีวภาพจากมูลวัวสำหรับใช้ในครัวเรือน",
-                    "เรียนรู้เทคนิคการเผาถ่านด้วยเตาอภินิหารเพื่อให้ได้น้ำส้มควันไม้ไล่แมลง",
-                    "ทดลองต่อวงจรโซลาร์เซลล์กระแสตรงอย่างง่ายสำหรับแปลงผัก"
-                ],
-                tips: "น้ำส้มควันไม้ที่ได้จากการเผาถ่านอย่างถูกวิธี มีคุณสมบัติเป็นสารไล่แมลงและเร่งการเจริญเติบโตของพืชชั้นดี โดยผสมน้ำในอัตราส่วน 1 ต่อ 200 ก่อนฉีดพ่น",
-                img: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80&w=600",
-                accent: "bg-amber-600",
-                ttsText: "สถานีที่ 7 ฐานพลังงานทดแทน เรียนรู้การประยุกต์ใช้เทคโนโลยีพลังงานสะอาด ทั้งโซลาร์เซลล์เพื่อการเกษตร การผลิตแก๊สชีวภาพ และการทำน้ำส้มควันไม้รักษ์โลก"
-            }
-        ];
+<div>
+<h3 class="font-bold text-amber-900">
+AI Audio Guide
+</h3>
 
-        let currentStationIndex = 0;
-        let isSpeaking = false;
-        let synth = window.speechSynthesis;
-        let speechUtterance = null;
+<p class="text-sm text-amber-800 mt-1 leading-relaxed">
+สามารถกดปุ่มฟังเสียงบรรยายในแต่ละฐานการเรียนรู้
+เพื่อใช้งานระบบเสียงอัตโนมัติผ่านเทคโนโลยี AI Text-To-Speech
+</p>
+</div>
+</div>
 
-        // 2. Control Audio Guide Overlay Toggle
-        function toggleAudioGuideIntro() {
-            const intro = document.getElementById('audioIntro');
-            intro.classList.toggle('hidden');
-            if(!intro.classList.contains('hidden')){
-                intro.classList.add('fade-in');
-            }
-        }
+<button onclick="toggleAudioGuideIntro()">
+<i data-lucide="x" class="w-5 h-5 text-amber-700"></i>
+</button>
 
-        // 3. Switch Station Feature
-        function switchStation(index) {
-            currentStationIndex = index;
-            const data = stationsData[index];
-            
-            // Stop speech if switching station
-            if (isSpeaking) {
-                stopSpeech();
-            }
+</div>
+</div>
 
-            // Update Map Buttons Active Styling
-            document.querySelectorAll('.map-btn').forEach((btn, idx) => {
-                if (idx === index) {
-                    btn.className = "map-btn p-3 bg-emerald-50 border-2 border-emerald-600 rounded-lg text-left transition-all";
-                    const titleDiv = btn.querySelector('div:nth-child(2)');
-                    if(titleDiv) titleDiv.className = "text-sm font-bold text-emerald-900";
-                } else {
-                    btn.className = "map-btn p-3 bg-stone-50 border border-stone-200 rounded-lg text-left transition-all hover:bg-stone-100";
-                    const titleDiv = btn.querySelector('div:nth-child(2)');
-                    if(titleDiv) titleDiv.className = "text-sm font-semibold text-stone-800";
-                }
-            });
+<!-- MENU -->
+<section class="mb-8">
 
-            // Update Card Contents with smooth flash animation
-            const card = document.getElementById('station-card');
-            card.style.opacity = '0.3';
-            
-            setTimeout(() => {
-                document.getElementById('station-accent').className = `h-3 ${data.accent}`;
-                document.getElementById('station-tag').innerText = data.tag;
-                document.getElementById('station-tag').className = `font-bold text-xs tracking-wider uppercase font-prompt text-emerald-800`;
-                document.getElementById('station-title').innerText = data.title;
-                document.getElementById('station-quote').innerText = data.quote;
-                document.getElementById('station-desc').innerText = data.desc;
-                document.getElementById('station-tips').innerText = data.tips;
-                document.getElementById('ai-image-preview').src = data.img;
+<div class="flex items-center gap-2 mb-4">
+<i data-lucide="map" class="w-5 h-5 text-emerald-700"></i>
+<h3 class="text-xl font-bold text-emerald-900">
+สถานีการเรียนรู้
+</h3>
+</div>
 
-                // Re-render Activities List
-                const actList = document.getElementById('station-activities');
-                actList.innerHTML = '';
-                data.activities.forEach(act => {
-                    const li = document.createElement('li');
-                    li.innerText = act;
-                    actList.appendChild(li);
-                });
+<div class="bg-white rounded-2xl p-4 shadow border">
 
-                // Reset AI Chat Box UI
-                document.getElementById('ai-chat-output-box').classList.add('hidden');
-                document.getElementById('ai-chat-text').innerText = '';
-                document.getElementById('ai-custom-prompt').value = '';
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3">
 
-                card.style.opacity = '1';
-                card.classList.add('fade-in');
-                setTimeout(() => card.classList.remove('fade-in'), 400);
-            }, 200);
-        }
+<button onclick="switchStation(0)"
+id="btn-map-0"
+class="map-btn bg-emerald-50 border-2 border-emerald-600 rounded-xl p-3 text-left">
 
-        // 4. Web Speech API (AI Audio Guide Synthesizer)
-        function toggleAudioPlay() {
-            if (isSpeaking) {
-                stopSpeech();
-            } else {
-                startSpeech();
-            }
-        }
+<div class="text-xs text-emerald-700 font-bold">
+ปฐมบท
+</div>
 
-        function startSpeech() {
-            if (!synth) return alert("เบราว์เซอร์ของคุณไม่รองรับระบบเสียงบรรยาย");
-            
-            const textToSpeak = stationsData[currentStationIndex].ttsText;
-            speechUtterance = new SpeechSynthesisUtterance(textToSpeak);
-            
-            // Search for Thai Voice
-            const voices = synth.getVoices();
-            const thaiVoice = voices.find(voice => voice.lang === 'th-TH' || voice.lang.includes('TH'));
-            if (thaiVoice) {
-                speechUtterance.voice = thaiVoice;
-            }
-            
-            speechUtterance.rate = 1.0;
-            speechUtterance.pitch = 1.0;
+<div class="font-bold">
+ศาสตร์พระราชา
+</div>
 
-            speechUtterance.onend = () => {
-                resetAudioBtn();
-            };
+</button>
 
-            speechUtterance.onerror = () => {
-                resetAudioBtn();
-            };
+<button onclick="switchStation(1)"
+id="btn-map-1"
+class="map-btn bg-stone-50 border rounded-xl p-3 text-left">
 
-            document.getElementById('audio-btn-text').innerText = "กำลังบรรยาย... (คลิกเพื่อหยุด)";
-            document.getElementById('audio-icon').setAttribute('data-lucide', 'square');
-            lucide.createIcons();
-            
-            isSpeaking = true;
-            synth.speak(speechUtterance);
-        }
+<div class="text-xs text-stone-500 font-bold">
+สถานี 1
+</div>
 
-        function stopSpeech() {
-            if (synth && synth.speaking) {
-                synth.cancel();
-            }
-            resetAudioBtn();
-        }
+<div class="font-semibold">
+คนรักษ์สมุนไพร
+</div>
 
-        function resetAudioBtn() {
-            isSpeaking = false;
-            document.getElementById('audio-btn-text').innerText = "ฟังเสียงบรรยาย";
-            document.getElementById('audio-icon').setAttribute('data-lucide', 'volume-2');
-            lucide.createIcons();
-        }
+</button>
 
-        // 5. AI Farm Generator Simulator (Imagen Mockup)
-        function generateRealAIImage() {
-            const loading = document.getElementById('ai-loading');
-            loading.classList.remove('hidden');
-            
-            // Simulate AI render delay time
-            setTimeout(() => {
-                loading.classList.add('hidden');
-                // Switch to a fresh related stunning landscape dynamically inside base station selection
-                const randomIds = [1593113041543-ec5e10d2962d, 1500651230198-e7e24a42e77b, 1523348837484-bc4ae47d6476];
-                const currentImg = stationsData[currentStationIndex].img;
-                document.getElementById('ai-image-preview').src = currentImg + "&sig=" + Math.floor(Math.random() * 1000);
-            }, 1800);
-        }
+<button onclick="switchStation(2)"
+id="btn-map-2"
+class="map-btn bg-stone-50 border rounded-xl p-3 text-left">
 
-        // 6. AI Smart Consultant Interactive Simulation
-        function askAIExpert(presetPrompt) {
-            const chatBox = document.getElementById('ai-chat-output-box');
-            const chatText = document.getElementById('ai-chat-text');
-            
-            chatBox.classList.remove('hidden');
-            chatText.innerText = "กำลังประมวลผลคำตอบจากปราชญ์เกษตรอัจฉริยะ...";
-            
-            setTimeout(() => {
-                let answer = `ขอแนะนำในฐานะปราชญ์ประจำฐานนี้ครับ สำหรับหัวข้อ "${presetPrompt}" สิ่งสำคัญคือเราต้องยึดหลักการพึ่งตนเองเป็นที่ตั้ง 
+<div class="text-xs text-stone-500 font-bold">
+สถานี 2
+</div>
 
-1. ปรับสมดุลตามธรรมชาติ: พยายามหลีกเลี่ยงการใช้สารเคมีในทุกขั้นตอน ให้ใช้ทรัพยากรหมุนเวียนในแปลง เช่น การทำน้ำหมักจุลินทรีย์ และปุ๋ยหมักใบไม้ 
-2. การดูแลรักษาที่ถูกวิธี: ควรรดน้ำในช่วงเช้าตรู่ และตรวจเช็คระบบระบายน้ำเพื่อป้องกันรากเน่าเฉาตาย
-3. เคล็ดลับเพิ่มผลผลิต: แนะนำให้ประยุกต์ใช้องค์ความรู้การจัดการพื้นที่รวมร่วมกับสูตร 30:30:30:10 เพื่อให้เกิดความสมบูรณ์สูงสุดครับ`;
-                
-                chatText.innerText = answer;
-            }, 1000);
-        }
+<div class="font-semibold">
+คนรักษ์แม่โพสพ
+</div>
 
-        function askAICustom() {
-            const input = document.getElementById('ai-custom-prompt');
-            const prompt = input.value.trim();
-            if (!prompt) return alert("กรุณาพิมพ์ข้อสงสัยหรือคำถามของคุณ");
-            
-            askAIExpert(prompt);
-            input.value = '';
-        }
+</button>
 
-        // 7. Share Base Feature
-        function shareStation() {
-            const currentTitle = stationsData[currentStationIndex].title;
-            if (navigator.share) {
-                navigator.share({
-                    title: currentTitle,
-                    text: `ศึกษาเรียนรู้ศาสตร์พระราชาประจำฐาน: ${currentTitle} ศูนย์การเรียนรู้ มทบ.๔๓`,
-                    url: window.location.href
-                }).catch(console.error);
-            } else {
-                alert(`คัดลอกลิงก์สถานี "${currentTitle}" สำเร็จ! สามารถส่งต่อให้เพื่อนหรือคณะเข้าชมได้ทันที`);
-            }
-        }
+<button onclick="switchStation(3)"
+id="btn-map-3"
+class="map-btn bg-stone-50 border rounded-xl p-3 text-left">
 
-        // 8. Personal Land Planner Algorithm (30:30:30:10 Rule)
-        function calculatePlan() {
-            const sizeInput = document.getElementById('planner-size');
-            const totalSize = parseFloat(sizeInput.value);
-            
-            if (isNaN(totalSize) || totalSize <= 0) {
-                alert("กรุณากรอกขนาดพื้นที่เป็นตัวเลขที่ถูกต้อง (ตารางวา)");
-                return;
-            }
+<div class="text-xs text-stone-500 font-bold">
+สถานี 3
+</div>
 
-            // Calculations based on standard theory rules
-            const water = totalSize * 0.30;
-            const rice = totalSize * 0.30;
-            const garden = totalSize * 0.30;
-            const home = totalSize * 0.10;
+<div class="font-semibold">
+คนรักษ์น้ำ
+</div>
 
-            // Update UI elements inside container
-            document.getElementById('res-water').innerText = water.toLocaleString(undefined, {maximumFractionDigits: 1});
-            document.getElementById('res-rice').innerText = rice.toLocaleString(undefined, {maximumFractionDigits: 1});
-            document.getElementById('res-garden').innerText = garden.toLocaleString(undefined, {maximumFractionDigits: 1});
-            document.getElementById('res-home').innerText = home.toLocaleString(undefined, {maximumFractionDigits: 1});
+</button>
 
-            // Contextual advice generator based on selected dropdown targets
-            const goal = document.getElementById('planner-goal').value;
-            let adviceText = "";
-            
-            if (goal === "protein") {
-                adviceText = "💡 คำแนะนำจาก AI: สำหรับการเน้นปศุสัตว์ ควรขุดบ่อรอบขอบสระน้ำเพื่อเลี้ยงปลาดุกหรือปลานิล และสร้างเล้าไก่ไข่เหนือน้ำ เพื่อให้มูลไก่เป็นอาหารปลา ช่วยลดต้นทุนลงได้สูงสุด";
-            } else if (goal === "mixed") {
-                adviceText = "💡 คำแนะนำจาก AI: เน้นเกษตรหมุนเวียน แนะนำให้จัดแปลงพืชสวนแบ่งเป็นพืชล้มลุกอายุสั้นเพื่อบริโภครายวัน และไม้ผลยืนต้นเพื่อสร้างความมั่นคงในครัวเรือนอย่างสมดุล";
-            } else if (goal === "forest") {
-                adviceText = "💡 คำแนะนำจาก AI: แนะนำให้ปลูกไม้ป่าในส่วนพื้นที่ 30% ทางทิศตะวันตกเพื่อเป็นแนวกันลมและบังแดดบ่าย และใช้หลักการปลูกไม้ 3 อย่าง ได้แก่ ไม้กิน ไม้ใช้สอย และไม้เศรษฐกิจ";
-            } else {
-                adviceText = "💡 คำแนะนำจาก AI: เน้นสมุนไพรเชิงท่องเที่ยว แนะนำแบ่งสัดส่วนพื้นที่รอบที่อยู่อาศัยเป็นแปลงสวนครัวสมุนไพรรูปแบบสวยงามจัดระเบียบง่ายเพื่อให้คณะเข้าเยี่ยมชมศึกษาได้สะดวก";
-            }
-            
-            document.getElementById('planner-advice').innerText = adviceText;
-            
-            // Show result display
-            const resBox = document.getElementById('planner-result');
-            resBox.classList.remove('hidden');
-            resBox.classList.add('fade-in');
-        }
+<button onclick="switchStation(4)"
+id="btn-map-4"
+class="map-btn bg-stone-50 border rounded-xl p-3 text-left">
 
-        // Initialize Lucide Vector Icons on Startup
-        window.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
-            // Trigger voice setup pre-loading inside speech synthesis engine
-            if (synth && synth.onvoiceschanged !== undefined) {
-                synth.onvoiceschanged = () => {};
-            }
-        });
-    </script>
+<div class="text-xs text-stone-500 font-bold">
+สถานี 4
+</div>
+
+<div class="font-semibold">
+คนรักษ์ดิน
+</div>
+
+</button>
+
+<button onclick="switchStation(5)"
+id="btn-map-5"
+class="map-btn bg-stone-50 border rounded-xl p-3 text-left">
+
+<div class="text-xs text-stone-500 font-bold">
+สถานี 5
+</div>
+
+<div class="font-semibold">
+คนรักษ์ป่า
+</div>
+
+</button>
+
+<button onclick="switchStation(6)"
+id="btn-map-6"
+class="map-btn bg-stone-50 border rounded-xl p-3 text-left">
+
+<div class="text-xs text-stone-500 font-bold">
+สถานี 6
+</div>
+
+<div class="font-semibold">
+คนรักษ์สัตว์
+</div>
+
+</button>
+
+<button onclick="switchStation(7)"
+id="btn-map-7"
+class="map-btn bg-stone-50 border rounded-xl p-3 text-left">
+
+<div class="text-xs text-stone-500 font-bold">
+สถานี 7
+</div>
+
+<div class="font-semibold">
+พลังงานทดแทน
+</div>
+
+</button>
+
+</div>
+</div>
+</section>
+
+<!-- CONTENT -->
+<section id="station-card"
+class="bg-white rounded-3xl shadow-xl overflow-hidden border">
+
+<div id="station-accent" class="h-3 bg-emerald-600"></div>
+
+<div class="p-8">
+
+<div class="flex flex-col md:flex-row justify-between gap-4 mb-6">
+
+<div>
+<div id="station-tag"
+class="text-sm font-bold text-emerald-700">
+ปฐมบทศาสตร์พระราชา
+</div>
+
+<h3 id="station-title"
+class="text-3xl font-bold mt-1">
+ศาสตร์พระราชา
+</h3>
+</div>
+
+<button onclick="toggleAudioPlay()"
+class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded-xl flex items-center gap-2">
+
+<i id="audio-icon"
+data-lucide="volume-2"
+class="w-5 h-5"></i>
+
+<span id="audio-btn-text">
+ฟังเสียงบรรยาย
+</span>
+
+</button>
+
+</div>
+
+<div id="station-quote"
+class="bg-stone-50 border-l-4 border-emerald-600 rounded-r-xl p-4 italic mb-6">
+“ศาสตร์แห่งความพอเพียงเพื่อความมั่นคงและยั่งยืน”
+</div>
+
+<div class="grid md:grid-cols-2 gap-8">
+
+<div>
+<h4 class="font-bold text-emerald-800 mb-3">
+รายละเอียดฐานการเรียนรู้
+</h4>
+
+<p id="station-desc" class="leading-relaxed text-stone-600">
+ศูนย์การเรียนรู้เกษตรทฤษฎีใหม่ครบวงจร
+เพื่อสร้างความมั่นคงทางอาหารและการพึ่งพาตนเอง
+</p>
+</div>
+
+<div>
+<h4 class="font-bold text-emerald-800 mb-3">
+กิจกรรมการเรียนรู้
+</h4>
+
+<ul id="station-activities"
+class="space-y-2 text-stone-600 list-disc list-inside">
+<li>เรียนรู้ศาสตร์พระราชา</li>
+<li>ศึกษาระบบโคกหนองนา</li>
+<li>พัฒนาทักษะการเกษตร</li>
+</ul>
+</div>
+
+</div>
+
+<!-- IMAGE -->
+<div class="mt-8">
+
+<img id="ai-image-preview"
+src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=1200"
+class="w-full rounded-2xl shadow-lg aspect-video object-cover">
+
+<button onclick="generateImage()"
+class="mt-4 bg-amber-400 hover:bg-amber-500 text-stone-900 font-bold px-5 py-3 rounded-xl flex items-center gap-2">
+
+<i data-lucide="sparkles" class="w-4 h-4"></i>
+
+<span>สุ่มภาพฐานการเรียนรู้</span>
+
+</button>
+
+</div>
+
+</div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-stone-900 text-stone-400 text-center py-6 mt-12">
+
+<p class="text-stone-300 font-semibold">
+© 2026 ศูนย์การเรียนรู้เกษตรทฤษฎีใหม่ครบวงจร มทบ.๔๓
+</p>
+
+<p class="text-sm mt-1">
+ค่ายเทพสตรีศรีสุนทร จังหวัดนครศรีธรรมราช
+</p>
+
+</footer>
+
+<script>
+
+const stationsData = [
+
+{
+tag:"ปฐมบทศาสตร์พระราชา",
+title:"ศาสตร์พระราชา",
+quote:"ศาสตร์แห่งความพอเพียงเพื่อความมั่นคงและยั่งยืน",
+desc:"เรียนรู้แนวพระราชดำริและหลักเศรษฐกิจพอเพียงเพื่อการดำรงชีวิตอย่างมั่นคง",
+activities:[
+"ศึกษาหลักเศรษฐกิจพอเพียง",
+"เรียนรู้โคกหนองนา",
+"สร้างความมั่นคงทางอาหาร"
+],
+img:"https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=1200",
+accent:"bg-emerald-600",
+tts:"ยินดีต้อนรับสู่ศูนย์การเรียนรู้เกษตรทฤษฎีใหม่ครบวงจร"
+},
+
+{
+tag:"สถานีที่ 1",
+title:"ฐานคนรักษ์สมุนไพร",
+quote:"สมุนไพรคือคลังยาจากธรรมชาติ",
+desc:"เรียนรู้การปลูกและใช้สมุนไพรพื้นบ้านเพื่อสุขภาพ",
+activities:[
+"ปลูกฟ้าทะลายโจร",
+"ทำชาสมุนไพร",
+"ศึกษาพืชยาไทย"
+],
+img:"https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&q=80&w=1200",
+accent:"bg-teal-600",
+tts:"ฐานคนรักษ์สมุนไพร แหล่งเรียนรู้สมุนไพรพื้นบ้าน"
+},
+
+{
+tag:"สถานีที่ 2",
+title:"ฐานคนรักษ์แม่โพสพ",
+quote:"ข้าวคือชีวิตของคนไทย",
+desc:"เรียนรู้การทำนาอินทรีย์และการลดต้นทุนการผลิตข้าว",
+activities:[
+"ทำนาอินทรีย์",
+"ใช้ปุ๋ยชีวภาพ",
+"อนุรักษ์พันธุ์ข้าว"
+],
+img:"https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&q=80&w=1200",
+accent:"bg-amber-500",
+tts:"ฐานคนรักษ์แม่โพสพ เรียนรู้การทำนาอินทรีย์"
+},
+
+{
+tag:"สถานีที่ 3",
+title:"ฐานคนรักษ์น้ำ",
+quote:"น้ำคือชีวิต",
+desc:"ระบบจัดการน้ำเพื่อการเกษตรอย่างยั่งยืน",
+activities:[
+"คลองไส้ไก่",
+"ระบบเก็บน้ำ",
+"พลังงานสูบน้ำ"
+],
+img:"https://images.unsplash.com/photo-1508873696983-2df519f0397e?auto=format&fit=crop&q=80&w=1200",
+accent:"bg-sky-600",
+tts:"ฐานคนรักษ์น้ำ เรียนรู้การจัดการน้ำอย่างมีประสิทธิภาพ"
+}
+
+];
+
+let currentStation = 0;
+let synth = window.speechSynthesis;
+let speaking = false;
+
+function toggleAudioGuideIntro(){
+document.getElementById("audioIntro").classList.toggle("hidden");
+}
+
+function switchStation(index){
+
+currentStation = index;
+
+const data = stationsData[index] || stationsData[0];
+
+document.getElementById("station-tag").innerText = data.tag;
+document.getElementById("station-title").innerText = data.title;
+document.getElementById("station-quote").innerText = data.quote;
+document.getElementById("station-desc").innerText = data.desc;
+
+document.getElementById("station-accent").className =
+`h-3 ${data.accent}`;
+
+document.getElementById("ai-image-preview").src = data.img;
+
+const ul = document.getElementById("station-activities");
+ul.innerHTML = "";
+
+data.activities.forEach(item=>{
+const li = document.createElement("li");
+li.innerText = item;
+ul.appendChild(li);
+});
+
+document.querySelectorAll(".map-btn").forEach((btn,i)=>{
+
+if(i===index){
+btn.classList.add("border-emerald-600","bg-emerald-50");
+}else{
+btn.classList.remove("border-emerald-600","bg-emerald-50");
+}
+
+});
+
+}
+
+function toggleAudioPlay(){
+
+if(!synth) return;
+
+if(speaking){
+synth.cancel();
+speaking = false;
+
+document.getElementById("audio-btn-text").innerText =
+"ฟังเสียงบรรยาย";
+
+document.getElementById("audio-icon")
+.setAttribute("data-lucide","volume-2");
+
+lucide.createIcons();
+
+return;
+}
+
+const text = stationsData[currentStation].tts;
+
+const utter = new SpeechSynthesisUtterance(text);
+
+utter.lang = "th-TH";
+utter.rate = 1;
+
+speaking = true;
+
+document.getElementById("audio-btn-text").innerText =
+"กำลังบรรยาย...";
+
+document.getElementById("audio-icon")
+.setAttribute("data-lucide","square");
+
+lucide.createIcons();
+
+utter.onend = ()=>{
+
+speaking = false;
+
+document.getElementById("audio-btn-text").innerText =
+"ฟังเสียงบรรยาย";
+
+document.getElementById("audio-icon")
+.setAttribute("data-lucide","volume-2");
+
+lucide.createIcons();
+
+};
+
+synth.speak(utter);
+
+}
+
+function generateImage(){
+
+const images = [
+"https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=1200",
+"https://images.unsplash.com/photo-1500651230198-e7e24a42e77b?auto=format&fit=crop&q=80&w=1200",
+"https://images.unsplash.com/photo-1523348837484-bc4ae47d6476?auto=format&fit=crop&q=80&w=1200"
+];
+
+const random = images[Math.floor(Math.random()*images.length)];
+
+document.getElementById("ai-image-preview").src = random;
+
+}
+
+window.addEventListener("DOMContentLoaded",()=>{
+
+lucide.createIcons();
+
+});
+
+</script>
+
 </body>
 </html>
